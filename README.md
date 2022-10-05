@@ -8,4 +8,4 @@
 
 ## Change password for root
 
-https://docs.gitlab.com/ee/security/reset_user_password.html
+https://docs.gitlab.com/ee/security/reset_user_password.html# docker-gitlab
