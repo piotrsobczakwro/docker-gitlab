@@ -4,6 +4,18 @@ GitLab CI/CD is the part of GitLab that you use for all of the continuous method
 
 
 ## Enable podman registry
+* Enable local registry  `podman run -d -p 5000:5000 --restart=always --name registry registry:2`
+![image](https://user-images.githubusercontent.com/86531003/212487339-85a48ca6-08b7-4411-b9d8-57f4ff6e61f5.png)
+
+* Pull image from dockerhub to your local registry ` podman pull httpd`
+![image](https://user-images.githubusercontent.com/86531003/212487377-3e06eab3-d289-4e52-bbe0-67f189fb5723.png)
+
+* tag image `podman pull httpd localhost:5000/local-httpd`
+
+podman tag hello-world:latest localhost:5000/my-world
+podman run -d -p 8080:80 localhost:5000/my-httpd
+
+![image](https://user-images.githubusercontent.com/86531003/212488141-a214acb2-af74-4667-873f-d24f8dcc9382.png)
 
 
 ## Deploy gitlab on podman
