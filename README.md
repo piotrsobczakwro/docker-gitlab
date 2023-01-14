@@ -106,6 +106,8 @@ root@vm-gitlab ~]# minikube start --driver=podman
 📘    https://minikube.sigs.k8s.io/docs/reference/drivers/none/
 
 ❌  Exiting due to DRV_AS_ROOT: The "podman" driver should not be used with root privileges.
+
+```
 ```
 
 Using force instead.
