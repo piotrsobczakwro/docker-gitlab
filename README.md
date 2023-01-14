@@ -96,18 +96,13 @@ chmod +x minikube-linux-amd64
 # move that file to path
 sudo mv minikube-linux-amd64 /usr/local/bin/minikube
 
-#
+# Installing minikube
 ```
 root@vm-gitlab ~]# minikube start --driver=podman
-😄  minikube v1.28.0 on Rocky 8.7 (kvm/amd64)
-✨  Using the podman driver based on user configuration
 🛑  The "podman" driver should not be used with root privileges. If you wish to continue as root, use --force.
-💡  If you are running minikube within a VM, consider using --driver=none:
-📘    https://minikube.sigs.k8s.io/docs/reference/drivers/none/
-
-❌  Exiting due to DRV_AS_ROOT: The "podman" driver should not be used with root privileges.
-
+Exiting due to DRV_AS_ROOT: The "podman" driver should not be used with root privileges.
 ```
+
 ```
 
 Using force instead.
