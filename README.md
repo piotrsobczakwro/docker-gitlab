@@ -1,17 +1,46 @@
 # GITLAB 
 
+GitLab CI/CD is the part of GitLab that you use for all of the continuous methods (Continuous Integration, Delivery, and Deployment). With GitLab CI/CD, you can test, build, and publish your code with no third-party application or integration needed.
+
+
+## Enable podman registry
+
+
+## Deploy gitlab on podman
+
+* Installation of podman
+  * `yum install podman -y`
+  *  `podman ps`
+
+* Deploy podman:
+ ```
+ # Create variable
+ export GITLAB_HOME=/srv
+ 
+ # Create paths 
+ mkdir -p $GITLAB_HOME/gitlab/{config,logs,data}
+ 
+ #  Run container
+ podman run --detach \
+  --privileged \
+  --hostname gitlab.lab.local \
+  --publish 443:443 --publish 80:80 --publish 55466:22 \
+  --name gitlab \
+  --restart always \
+  --volume $GITLAB_HOME/gitlab/config:/etc/gitlab \
+  --volume $GITLAB_HOME/gitlab/logs:/var/log/gitlab \
+  --volume $GITLAB_HOME/gitlab/data:/var/opt/gitlab \
+  gitlab/gitlab-ce:latest
+ ```
+
+
 
 ## Links
 * https://gitlab.com/gitlab-org/omnibus-gitlab/-/tree/master/files/gitlab-config-template
 
-
-
 ## Change password for root
 
 https://docs.gitlab.com/ee/security/reset_user_password.html# docker-gitlab
-
-
-
 
 
 
