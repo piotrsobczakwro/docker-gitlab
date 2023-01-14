@@ -95,6 +95,7 @@ chmod +x minikube-linux-amd64
 
 # move that file to path
 sudo mv minikube-linux-amd64 /usr/local/bin/minikube
+```
 
 # Installing minikube
 ```
