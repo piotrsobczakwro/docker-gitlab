@@ -109,6 +109,15 @@ Exiting due to DRV_AS_ROOT: The "podman" driver should not be used with root pri
 Using force instead.
 minikube start --driver=podman --force
 
+# Download kubectl 
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 
+# Give the executive permission for Kubectl
+
+chmod +x kubectl
+
+# Move it to the same directory where you stored Minikube which is /usr/local/bin
+
+sudo mv kubectl  /usr/local/bin/
 ```
 
